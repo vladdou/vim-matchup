@@ -1,5 +1,5 @@
 if not pcall(require, 'nvim-treesitter') then
-  return {}
+  return {init = function() end}
 end
 
 local treesitter = require 'nvim-treesitter'

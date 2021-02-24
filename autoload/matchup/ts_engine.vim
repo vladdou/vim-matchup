@@ -7,7 +7,7 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-function s:forward(fn, ...)
+function! s:forward(fn, ...)
   let l:ret = luaeval(
         \ 'require"treesitter-matchup.internal".' . a:fn . '(unpack(_A))',
         \ a:000)
